@@ -65,5 +65,13 @@ router.delete('/:id', checkId, async (req, res, next) => {
     }
 })
 
+// Fallback in Case of Uncaught Errors
+
+router.use((error, req, res) => {
+    res
+      .status(500)
+      .json({ message: error.message, stack: error.stack });
+  });
+
 
 module.exports = router;
