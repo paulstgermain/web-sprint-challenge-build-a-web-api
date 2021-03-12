@@ -14,6 +14,6 @@ Go code!
 */
 const server = require('./api/server');
 
-server.listen(4000, () => {
-    console.log(`Magic happening on [PORT: 4000]!`);
+server.listen(5000, () => {
+    console.log(`Magic happening on [PORT: 5000]!`);
 });
